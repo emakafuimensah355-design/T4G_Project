@@ -1,199 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Total Waterproofing Solutions | Client Dashboard</title>
-    <meta name="description" content="Client dashboard for monitoring chemical product orders, professional service projects, and diagnostic audits at Total Waterproofing Solutions." />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="src/style.css" />
-</head>
-<body>
-
-    <header class="dashboard-topbar">
-        <div class="container dashboard-topbar-inner">
-            <div class="dashboard-brand">
+      <meta name="description"
+      content="Client dashboard for monitoring chemical product orders, professional service projects, and diagnostic audits at Total Waterproofing Solutions." />
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"
+        rel="stylesheet">
+          <!-- External CSS -->
+          <link rel="stylesheet" href="../scr/style.css" />
+        </head>
+        <body>
+          <header class="dashboard-topbar">
+            <div class="container dashboard-topbar-inner">
+              <div class="dashboard-brand">
                 <span class="logo-mark" aria-hidden="true">
-                    <span class="logo-ring"></span>
-                    <span class="logo-drip"></span>
+                  <span class="logo-ring">
+                  </span>
+                  <span class="logo-drip">
+                  </span>
                 </span>
                 <div>
-                    <p class="eyebrow">Total Waterproofing Solutions</p>
+                  <p class="eyebrow">Total Waterproofing Solutions</p>
                     <h1>Client Dashboard</h1>
-                </div>
-            </div>
-            <div class="dashboard-user">
-                <p>Welcome back, Valued Client</p>
-                <a href="login.html" class="btn btn-secondary">Log Out</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="dashboard-layout">
-        <aside class="dashboard-sidebar" aria-label="Dashboard navigation">
-            <nav>
-                <ul class="sidebar-nav">
-                    <li><a href="dashboard.html" class="active">Overview</a></li>
-                    <li><a href="#orders">Product Orders</a></li>
-                    <li><a href="#projects">Service Projects</a></li>
-                    <li><a href="diagnostic.html">Diagnostic Logs</a></li>
-                    <li><a href="contact.html">Help & Support</a></li>
-                    <li><a href="#settings">Settings</a></li>
-                </ul>
-            </nav>
-        </aside>
-
-        <section class="dashboard-main">
-            <header class="dashboard-main-header">
-                <div>
-                    <p class="section-eyebrow">Client Overview Portal</p>
-                    <h2>Track orders, service projects, and diagnostic audits in one place.</h2>
-                    <p class="section-lede">Your central workspace for chemical procurement, active execution services, and property health monitoring.</p>
-                </div>
-            </header>
-
-            <div class="dashboard-metrics">
-                <article class="metric-card">
-                    <p class="metric-label">Active Product Orders</p>
-                    <h3>2 Shipments En Route</h3>
-                    <p>Monitoring recent chemical purchases and delivery status.</p>
-                </article>
-                <article class="metric-card">
-                    <p class="metric-label">On-Site Service Projects</p>
-                    <h3>1 Inspection Scheduled</h3>
-                    <p>Professional team bookings and execution updates at a glance.</p>
-                </article>
-                <article class="metric-card">
-                    <p class="metric-label">Diagnostic Audits</p>
-                    <h3>1 Property Health Report Available</h3>
-                    <p>Latest moisture and structural condition insights ready to review.</p>
-                </article>
-            </div>
-
-            <section class="dashboard-section" id="projects">
-                <div class="section-header">
-                    <p class="section-eyebrow">Active Service Project Tracker</p>
-                    <h3>Basement Sealing & Foundation Injection</h3>
-                </div>
-                <div class="project-status-card">
-                    <div class="project-field">
-                        <span>Location</span>
-                        <strong>Accra, Greater Accra Region</strong>
                     </div>
-                    <div class="project-field">
-                        <span>Status</span>
-                        <strong class="status-badge status-in-progress">In Progress / Audit Complete</strong>
+                  </div>
+                  <div class="dashboard-user">
+                    <p>Welcome back, Valued Client</p>
+                      <a href="login.html" class="btn btn-secondary">Log Out</a>
+                      </div>
                     </div>
-                    <div class="project-field">
-                        <span>Assigned Field Engineer</span>
-                        <strong>Kwame Asante</strong>
-                    </div>
-                    <div class="project-field">
-                        <span>Next Scheduled Site Visit</span>
-                        <strong>Thursday, 10:00 AM</strong>
-                    </div>
-                </div>
-            </section>
-
-            <section class="dashboard-section" id="orders">
-                <div class="section-header">
-                    <p class="section-eyebrow">Chemical Product Orders</p>
-                    <h3>Recent purchase summary</h3>
-                </div>
-                <div class="order-summary-card">
-                    <table class="order-table">
-                        <thead>
-                            <tr>
-                                <th>Order ID</th>
-                                <th>Item Description</th>
-                                <th>Quantity</th>
-                                <th>Status</th>
-                                <th>Tracking</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>#TWS-1084</td>
-                                <td>Polyurethane Liquid Membrane - 20L Drum</td>
-                                <td>4 Drums</td>
-                                <td>Dispatched</td>
-                                <td><a href="#">View Tracking</a></td>
-                            </tr>
-                            <tr>
-                                <td>#TWS-1079</td>
-                                <td>Crystalline Waterproofing Powder - 25kg Bag</td>
-                                <td>6 Bags</td>
-                                <td>Ready for Pickup</td>
-                                <td><a href="#">View Order</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <div class="dashboard-actions">
-                <a href="services.html" class="btn btn-gold">Order More Chemical Products</a>
-                <a href="contact.html" class="btn btn-secondary">Schedule New Site Audit</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <span class="logo-mark logo-mark-sm" aria-hidden="true">
-                    <span class="logo-ring"></span>
-                    <span class="logo-drip"></span>
-                </span>
-                <p>Total Waterproofing Solutions keeps residential and commercial properties dry with certified basement, foundation, and roof waterproofing systems.</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <a href="index.html">Home</a>
-                    <a href="services.html">Service</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Account</h4>
-                    <a href="login.html">Login</a>
-                    <a href="signup.html">Signup</a>
-                    <a href="diagnostic.html">Diagnostic</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Contact</h4>
-                    <a href="tel:+233XXXXXXXXXX"><i class="fa-solid fa-phone"></i> +233 XX XXX XXXX</a>
-                    <a href="mailto:info@totalwaterproofingsolutions.com"><i class="fa-solid fa-envelope"></i> info@totalwaterproofingsolutions.com</a>
-                    <span><i class="fa-solid fa-location-dot"></i> Accra, Greater Accra Region, Ghana</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container bottom-container">
-                <p>&copy; 2026 Total Waterproofing Solutions. All rights reserved.</p>
-                <button class="help-btn"><i class="fa-solid fa-headset"></i> Need Help?</button>
-            </div>
-        </div>
-    </footer>
-
-    <script src="scr/script.js"></script>
-</body>
-</html>
-
-
+                  </header>
+                  <main class="dashboard-layout">
+                    <aside class="dashboard-sidebar" aria-label="Dashboard navigation">
+                      <nav>
+                        <ul class="sidebar-nav">
+                          <li>
+                            <a href="dashboard.html" class="active">Overview</a>
+                            </li>
+                            <li>
+                              <a href="#orders">Product Orders</a>
+                              </li>
+                              <li>
+                                <a href="#projects">Service Projects</a>
+                                </li>
+                                <li>
+                                  <a href="diagnostic.html">Diagnostic Logs</a>
+                                  </li>
+                                  <li>
+                                    <a href="contact.html">Help & Support</a>
+                                    </li>
+                                    <li>
+                                      <a href="#settings">Settings</a>
+                                      </li>
+                                    </ul>
+                                  </nav>
+                                </aside>
+                                <section class="dashboard-main">
+                                  <header class="dashboard-main-header">
+                                    <div>
+                                      <p class="section-eyebrow">Client Overview Portal</p>
+                                        <h2>Track orders, service projects, and diagnostic audits in one place.</h2>
+                                          <p class="section-lede">Your central workspace for chemical procurement, active execution services,
+                                            and property health monitoring.</p>
+                                            </div>
+                                          </header>
+                                          <div class="dashboard-metrics">
+                                            <article class="metric-card">
+                                              <p class="metric-label">Active Product Orders</p>
+                                                <h3>2 Shipments En Route</h3>
+                                                  <p>Monitoring recent chemical purchases and delivery status.</p>
+                                                  </article>
+                                                  <article class="metric-card">
+                                                    <p class="metric-label">On-Site Service Projects</p>
+                                                      <h3>1 Inspection Scheduled</h3>
+                                                        <p>Professional team bookings and execution updates at a glance.</p>
+                                                        </article>
+                                                        <article class="metric-card">
+                                                          <p class="metric-label">Diagnostic Audits</p>
+                                                            <h3>1 Property Health Report Available</h3>
+                                                              <p>Latest moisture and structural condition insights ready to review.</p>
+                                                              </article>
+                                                            </div>
+                                                            <section class="dashboard-section" id="projects">
+                                                              <div class="section-header">
+                                                                <p class="section-eyebrow">Active Service Project Tracker</p>
+                                                                  <h3>Basement Sealing & Foundation Injection</h3>
+                                                                  </div>
+                                                                  <div class="project-status-card">
+                                                                    <div class="project-field">
+                                                                      <span>Location</span>
+                                                                        <strong>Accra, Greater Accra Region</strong>
+                                                                        </div>
+                                                                        <div class="project-field">
+                                                                          <span>Status</span>
+                                                                            <strong class="status-badge status-in-progress">In
+                                                                              Progress / Audit Complete</strong>
+                                                                              </div>
+                                                                              <div class="project-field">
+                                                                                <span>Assigned Field Engineer</span>
+                                                                                  <strong>Kwame Asante</strong>
+                                                                                  </div>
+                                                                                  <div class="project-field">
+                                                                                    <span>Next Scheduled Site Visit</span>
+                                                                                      <strong>Thursday, 10:00
+                                                                                        AM</strong>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                    </section>
+                                                                                    <section class="dashboard-section" id="orders">
+                                                                                      <div class="section-header">
+                                                                                        <p class="section-eyebrow">Chemical Product Orders</p>
+                                                                                          <h3>Recent purchase summary</h3>
+                                                                                          </div>
+                                                                                          <div class="order-summary-card">
+                                                                                            <table class="order-table">
+                                                                                              <thead>
+                                                                                                <tr>
+                                                                                                  <th>Order ID</th>
+                                                                                                    <th>Item Description</th>
+                                                                                                      <th>Quantity</th>
+                                                                                                        <th>Status</th>
+                                                                                                          <th>Tracking</th>
+                                                                                                          </tr>
+                                                                                                        </thead>
+                                                                                                        <tbody>
+                                                                                                          <tr>
+                                                                                                            <td>#TWS-1084</td>
+                                                                                                              <td>Polyurethane Liquid Membrane - 20L Drum</td>
+                                                                                                                <td>4 Drums</td>
+                                                                                                                  <td>Dispatched</td>
+                                                                                                                    <td>
+                                                                                                                      <a href="#">View Tracking</a>
+                                                                                                                      </td>
+                                                                                                                    </tr>
+                                                                                                                    <tr>
+                                                                                                                      <td>#TWS-1079</td>
+                                                                                                                        <td>Crystalline Waterproofing Powder - 25kg Bag</td>
+                                                                                                                          <td>6 Bags</td>
+                                                                                                                            <td>Ready for Pickup</td>
+                                                                                                                              <td>
+                                                                                                                                <a href="#">View Order</a>
+                                                                                                                                </td>
+                                                                                                                              </tr>
+                                                                                                                            </tbody>
+                                                                                                                          </table>
+                                                                                                                        </div>
+                                                                                                                      </section>
+                                                                                                                      <div class="dashboard-actions">
+                                                                                                                        <a href="services.html" class="btn btn-gold">Order More Chemical
+                                                                                                                          Products</a>
+                                                                                                                            <a href="contact.html" class="btn btn-secondary">Schedule New Site Audit</a>
+                                                                                                                            </div>
+                                                                                                                          </section>
+                                                                                                                        </main>
+                                                                                                                        <footer class="site-footer">
+                                                                                                                          <div class="container footer-content">
+                                                                                                                            <div class="footer-brand">
+                                                                                                                              <span class="logo-mark logo-mark-sm" aria-hidden="true">
+                                                                                                                                <span
+                                                                                                                                  class="logo-ring">
+                                                                                                                                  </span>
+                                                                                                                                  <span class="logo-drip">
+                                                                                                                                  </span>
+                                                                                                                                </span>
+                                                                                                                                <p>Total Waterproofing Solutions keeps residential and commercial properties dry with certified
+                                                                                                                                  basement, foundation, and roof waterproofing systems.</p>
+                                                                                                                                    <div class="footer-social">
+                                                                                                                                      <a href="#" aria-label="Facebook">
+                                                                                                                                        <i
+                                                                                                                                          class="fa-brands fa-facebook-f">
+                                                                                                                                          </i>
+                                                                                                                                        </a>
+                                                                                                                                        <a href="#" aria-label="Instagram">
+                                                                                                                                          <i
+                                                                                                                                            class="fa-brands fa-instagram">
+                                                                                                                                            </i>
+                                                                                                                                          </a>
+                                                                                                                                          <a href="#" aria-label="LinkedIn">
+                                                                                                                                            <i
+                                                                                                                                              class="fa-brands fa-linkedin-in">
+                                                                                                                                              </i>
+                                                                                                                                            </a>
+                                                                                                                                            <a href="#" aria-label="X">
+                                                                                                                                              <i
+                                                                                                                                                class="fa-brands fa-x-twitter">
+                                                                                                                                                </i>
+                                                                                                                                              </a>
+                                                                                                                                            </div>
+                                                                                                                                          </div>
+                                                                                                                                          <div class="footer-links">
+                                                                                                                                            <div class="footer-column">
+                                                                                                                                              <h4>Company</h4>
+                                                                                                                                                <a href="../index.html">Home</a>
+                                                                                                                                                  <a href="services.html">Service</a>
+                                                                                                                                                    <a
+                                                                                                                                                      href="contact.html">Contact</a>
+                                                                                                                                                      </div>
+                                                                                                                                                      <div class="footer-column">
+                                                                                                                                                        <h4>Account</h4>
+                                                                                                                                                          <a href="login.html">Login</a>
+                                                                                                                                                            <a href="signup.html">Signup</a>
+                                                                                                                                                              <a
+                                                                                                                                                                href="diagnostic.html">Diagnostic</a>
+                                                                                                                                                                </div>
+                                                                                                                                                                <div class="footer-column">
+                                                                                                                                                                  <h4>Contact</h4>
+                                                                                                                                                                    <a href="tel:+233544116060">
+                                                                                                                                                                      <i class="fa-solid fa-phone">
+                                                                                                                                                                      </i> +233 54 411 6060</a>
+                                                                                                                                                                      <a href="mailto:total.waterproofingsolns@gmail.com">
+                                                                                                                                                                        <i class="fa-solid fa-envelope">
+                                                                                                                                                                        </i>
+                                                                                                                                                                        total.waterproofingsolns@gmail.com</a>
+                                                                                                                                                                          <span>
+                                                                                                                                                                            <i class="fa-solid fa-location-dot">
+                                                                                                                                                                            </i> Accra,
+                                                                                                                                                                            Greater Accra Region, Ghana</span>
+                                                                                                                                                                            </div>
+                                                                                                                                                                          </div>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        <div class="footer-bottom">
+                                                                                                                                                                          <div class="container bottom-container">
+                                                                                                                                                                            <p>&copy; 2026 Total Waterproofing Solutions. All rights reserved.</p>
+                                                                                                                                                                              <button class="help-btn">
+                                                                                                                                                                                <i
+                                                                                                                                                                                  class="fa-solid fa-headset">
+                                                                                                                                                                                  </i> Need Help?</button>
+                                                                                                                                                                                </div>
+                                                                                                                                                                              </div>
+                                                                                                                                                                            </footer>
+                                                                                                                                                                            <script src="../scr/script.js">
+                                                                                                                                                                            </script>
+                                                                                                                                                                          </body>
+                                                                                                                                                                        </html>
