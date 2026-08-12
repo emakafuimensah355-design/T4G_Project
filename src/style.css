@@ -1019,4 +1019,16 @@ input, textarea { font: inherit; }
 
 @media (max-width: 720px) {
     .cards-flex { flex-direction: column; }
+
+    /* .card-flex's "flex: 1 1 320px" sets its WIDTH on desktop (a row
+       layout), but once .cards-flex switches to a column above, that
+       same 320px basis + flex-grow:1 fight over vertical space instead
+       — with no fixed container height to grow into, that's what was
+       squishing/overlapping the cards. Resetting the basis here makes
+       each card just take its natural height, full width, stacked
+       cleanly with the existing gap. */
+    .card-flex {
+        flex: 1 1 auto;
+        width: 100%;
+    }
 }
