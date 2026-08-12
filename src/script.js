@@ -157,27 +157,24 @@ document.addEventListener('DOMContentLoaded', () => {
      have (Home, Services, Contact, Login, Signup, Diagnostic);
      the Dashboard page uses a different header, so these simply
      find nothing there and do nothing — no conflicts either way.
+
+     The nav toggle here only ever adds/removes a single class —
+     "nav-open" on .main-nav — and lets style.css decide what that
+     class actually looks like. No inline display styles, so there
+     is only one place (the CSS) controlling how the mobile menu
+     renders.
      ============================================================ */
   (() => {
     const hamburger = document.querySelector('.hamburger');
-    const navList = document.querySelector('.nav-list');
+    const mainNav = document.querySelector('.main-nav');
+    const navMenu = document.querySelector('.nav-menu');
 
-    if (hamburger && navList) {
+    if (hamburger && mainNav && navMenu) {
       const setMenuState = (isOpen) => {
         hamburger.setAttribute('aria-expanded', String(isOpen));
         hamburger.classList.toggle('is-active', isOpen);
-        navList.classList.toggle('nav-list--open', isOpen);
-
-        if (window.innerWidth <= 768) {
-          navList.style.display = isOpen ? 'flex' : 'none';
-        } else {
-          navList.style.display = '';
-        }
+        mainNav.classList.toggle('nav-open', isOpen);
       };
-
-      if (window.innerWidth <= 768) {
-        navList.style.display = 'none';
-      }
 
       hamburger.addEventListener('click', () => {
         const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
@@ -185,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       document.addEventListener('click', (event) => {
-        const clickedInsideNav = navList.contains(event.target) || hamburger.contains(event.target);
+        const clickedInsideNav = mainNav.contains(event.target);
         const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
         if (isOpen && !clickedInsideNav) setMenuState(false);
       });
@@ -194,11 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === 'Escape') setMenuState(false);
       });
 
+      // 720px matches the breakpoint in style.css where the
+      // hamburger takes over from the full nav bar.
       window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-          setMenuState(false);
-          navList.style.display = '';
-        }
+        if (window.innerWidth > 720) setMenuState(false);
       });
     }
 

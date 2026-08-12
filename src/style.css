@@ -302,7 +302,18 @@ input, textarea { font: inherit; }
 }
 .company-name-sub { color: var(--teal-dark); }
 
+/* .main-nav is the flex row that holds the collapsible .nav-menu
+   (links + CTA) plus the hamburger button. On mobile, .nav-menu is
+   the single element that gets hidden/shown as a dropdown — this
+   keeps the links and the CTA button moving together as one block
+   instead of being positioned separately. */
 .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    position: relative;
+}
+.nav-menu {
     display: flex;
     align-items: center;
     gap: 28px;
@@ -334,15 +345,23 @@ input, textarea { font: inherit; }
 .hamburger {
     display: none;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
+    width: 34px;
+    height: 34px;
     padding: 6px;
+    z-index: 2;
 }
 .hamburger span {
     width: 22px;
     height: 2px;
     background: var(--paper);
     border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
+.hamburger.is-active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.is-active span:nth-child(2) { opacity: 0; }
+.hamburger.is-active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- Hero ---------- */
 .hero-section { padding: 72px 0 56px; }
@@ -797,42 +816,46 @@ input, textarea { font: inherit; }
     .footer-links { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* Mobile nav: .nav-menu (nav-list + CTA button, wrapped together in
+   the HTML) is hidden by default and only shown once .main-nav
+   carries the "nav-open" class — which script.js toggles on click.
+   Because both the links and the CTA live inside one wrapper, they
+   move and get positioned as a single dropdown block instead of two
+   separately-placed pieces. */
 @media (max-width: 720px) {
-    .main-nav { position: relative; }
-    .main-nav .nav-list, .btn-nav-cta { display: none; }
+    .nav-menu { display: none; }
     .hamburger { display: flex; }
-    .main-nav.nav-open {
-        align-items: stretch;
-    }
-    .main-nav.nav-open .nav-list,
-    .main-nav.nav-open .btn-nav-cta {
+
+    .main-nav.nav-open .nav-menu {
         display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        min-width: 220px;
+
+        background: rgba(23, 21, 18, 0.98);
+        border: 1px solid var(--line-light);
+        border-radius: var(--radius);
+        padding: 14px 18px 18px;
+        box-shadow: var(--shadow-card);
+        z-index: 60;
     }
+
     .main-nav.nav-open .nav-list {
         flex-direction: column;
         align-items: flex-start;
         gap: 2px;
-        position: absolute;
-        top: calc(100% + 12px);
-        right: 0;
-        background: rgba(23, 21, 18, 0.98);
-        border: 1px solid var(--line-light);
-        border-radius: var(--radius) var(--radius) 0 0;
-        border-bottom: none;
-        padding: 14px 18px 6px;
-        box-shadow: var(--shadow-card);
-        min-width: 200px;
     }
     .main-nav.nav-open .nav-list a { padding: 8px 0; width: 100%; }
     .main-nav.nav-open .btn-nav-cta {
         justify-content: center;
-        position: absolute;
-        top: calc(100% + 12px);
-        right: 0;
-        width: 200px;
-        margin-top: 214px;
-        border-radius: 0 0 var(--radius) var(--radius);
+        margin-top: 10px;
     }
+
     .hero-stats { gap: 24px; flex-wrap: wrap; }
     .services-grid { grid-template-columns: 1fr; }
     .process-list { grid-template-columns: 1fr; }
